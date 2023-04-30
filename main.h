@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <map>
 using namespace std;
-inline void Test_Array_Based_List();
+void Test_Array_Based_List();
 void Test_Singly_Linked_list();
 inline void Test_Doubly_Linked_list();
 inline void Test_Circular_Linked_List();
