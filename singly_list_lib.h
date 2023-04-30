@@ -184,4 +184,80 @@ void singly_linked_list<T>::removeAtHead()
     size--;
 }
 
+/**
+ * retrieveAt - function that returns
+ * the nth node of a linked list.
+ *
+ * @tparam T: Element datatype
+ * @param index: Element position
+ * @return T: Element value
+ */
+template <typename T>
+T singly_linked_list<T>::retrieveAt(int index)
+{
+    singly_linked_list_node<T> *node = head;
+
+    if (index < 0 || index > (size - 1))
+    {
+        cout << "Error, index out of range!\n";
+        exit(100);
+    }
+
+    while (index--)
+        node = node->next;
+
+    return (node->n);
+}
+
+/**
+ * replaceAt - Replace the value at the index n with a new value (newElement)
+ *
+ * @tparam T: Element datatype
+ * @param newElement: The New element
+ * @param index: The position of the index
+ */
+template <typename T>
+void singly_linked_list<T>::replaceAt(T newElement, int index)
+{
+    singly_linked_list_node<T> *node = head;
+
+    if (index < 0 || index > (size - 1))
+    {
+        cout << "Error, index out of range!\n";
+        exit(100);
+    }
+
+    while (index--)
+        node = node->next;
+
+    node->n = newElement;
+}
+
+/**
+ * isItemAtEqual - Check if the Item at index (index)
+ * is equal to the element (elemtn) or not
+ *
+ * @tparam T: Element datatype
+ * @param element: Element to be compare with
+ * @param index: Position of the element
+ * @return true: if the two elements is equal
+ * @return false: Otherwise
+ */
+template <typename T>
+bool singly_linked_list<T>::isItemAtEqual(T element, int index)
+{
+    singly_linked_list_node<T> *node = head;
+
+    if (index < 0 || index > (size - 1))
+    {
+        cout << "Error, index out of range!\n";
+        exit(100);
+    }
+
+    while (index--)
+        node = node->next;
+
+    return (node->n == element);
+}
+
 #endif /* SINGLY_LIST_LIB_H */

@@ -20,16 +20,17 @@ int main(void)
     do
     {
     printf("Choose test number: \n");
-    cout << "1.Test_Array_Based_List.\n"
-         << "2.Test_Single_Linked_list.\n"
-         << "3.Test_Doubly_Linked_list\n"
-         << "4.Test_Circular_Linked_List\n"
-         << "5.Test_Stack\n"
-         << "6.Test_Queu\n";
+    cout << "1.Test Array Based List.\n"
+         << "2.Test Singly Linked list.\n"
+         << "3.Test Doubly Linked list\n"
+         << "4.Test Circular Linked List\n"
+         << "5.Test Stack\n"
+         << "6.Test Queu\n";
     cout << "Enter your choice here: ";
     cin >> choice;
     } while (choice < '1' || choice > '6');
 
+    cout << "Start Testing...\n\n";
     Test[choice]();
     return (0);
 }
