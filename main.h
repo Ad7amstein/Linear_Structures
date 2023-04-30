@@ -25,8 +25,6 @@ struct singly_linked_list_node
     T n;
     struct singly_linked_list_node<T> *next;
 };
-// template <typename T>
-// using singly_list_t = singly_linked_list<T>;
 
 template <typename T>
 class singly_linked_list
