@@ -7,10 +7,10 @@
 using namespace std;
 void Test_Array_Based_List();
 void Test_Singly_Linked_list();
-inline void Test_Doubly_Linked_list();
-inline void Test_Circular_Linked_List();
-inline void Test_Stack();
-inline void Test_Queu();
+void Test_Doubly_Linked_list();
+void Test_Circular_Linked_List();
+void Test_Stack();
+void Test_Queu();
 
 /**
  * struct singly_linked_list - singly linked list
