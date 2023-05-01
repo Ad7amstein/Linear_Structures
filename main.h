@@ -33,19 +33,19 @@ public:
     singly_linked_list() : head(nullptr), size(0) {} // DONE
     void insertAtHead(T element);                    // DONE
     void insertAtTail(T element);                    // DONE
-    void insertAt(T element, int index);
-    void removeAtHead(); // DONE
-    void removeAtTail(); // DONE
-    void removeAt(int index);
-    T retrieveAt(int index);                        // DONE
-    void replaceAt(T newElement, int index);        // DONE
-    bool isExist(T element);                        // DONE
-    bool isItemAtEqual(T element, int index);       // DONE
-    void swap(int firstItemIdx, int secondItemIdx); // swap two nodes without swapping data.
-    bool isEmpty();                                 // DONE
-    int linkedListSize();                           // DONE
-    void clear();                                   // DONE
-    void print();                                   // DONE
+    void insertAt(T element, int index);             // DONE
+    void removeAtHead();                             // DONE
+    void removeAtTail();                             // DONE
+    void removeAt(int index);                        // DONE
+    T retrieveAt(int index);                         // DONE
+    void replaceAt(T newElement, int index);         // DONE
+    bool isExist(T element);                         // DONE
+    bool isItemAtEqual(T element, int index);        // DONE
+    void swap(int firstItemIdx, int secondItemIdx);  // DONE
+    bool isEmpty();                                  // DONE
+    int linkedListSize();                            // DONE
+    void clear();                                    // DONE
+    void print();                                    // DONE
 private:
     singly_linked_list_node<T> *head;
     int size;

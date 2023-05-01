@@ -47,6 +47,40 @@ void Test_Singly_Linked_list()
     cout << (list.isEmpty() ? "List is Empty" : "List not Empty") << endl;
     list.clear();
     list.print();
+    // list.removeAt(0); // list is empty
     cout << (list.isEmpty() ? "List is Empty" : "List not Empty") << endl;
     printf("1: %s\n", list.isExist(1) ? "YES" : "NO");
+    cout << "---------------------------------------\n";
+    list.insertAt(3, 0);
+    list.insertAt(4, 1);
+    // list.insertAt(8, 5);
+    list.insertAt(5, 2);
+    list.insertAt(2, 0);
+    list.insertAt(1, 0);
+    list.insertAt(0, 0);
+    // list.insertAt(3, 100);
+    list.print();
+    cout << "---------------------------------------\n";
+    // list.removeAt(-1); // out of range
+    // list.removeAt(8); // out of range
+    list.removeAt(0);
+    list.print();
+    cout << "list size: " << list.linkedListSize() << endl;
+    cout << "---------------------------------------\n";
+    cout << "Swap1: \n";
+    list.swap(1, 3); // DONE
+    list.print();
+    cout << "Swap2: \n";
+    list.swap(1, 1); // DONE
+    list.print();
+    cout << "Swap3: \n";
+    list.swap(0, 4); // DONE
+    list.print();
+    cout << "Swap4: \n";
+    list.swap(0, 1); // DONE
+    list.print();
+    cout << "Swap5: \n";
+    list.swap(1, 2); // DONE
+    list.print();
+
 }
