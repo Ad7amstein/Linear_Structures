@@ -10,7 +10,7 @@ int main(void)
     Test = {
         // {'1', Test_Array_Based_List},
         {'2', Test_Singly_Linked_list},
-        // {'3', Test_Doubly_Linked_list},
+        {'3', Test_doubly_linked_list},
         // {'4', Test_Circular_Linked_List},
         // {'5', Test_Stack},
         // {'6', Test_Queu}

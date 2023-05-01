@@ -82,5 +82,74 @@ void Test_Singly_Linked_list()
     cout << "Swap5: \n";
     list.swap(1, 2); // DONE
     list.print();
+}
 
+/**
+ * Test_doubly_Linked_list - function to test
+ * doubly linked list
+ */
+void Test_doubly_linked_list()
+{
+    doubly_linked_list<int> list;
+    cout << (list.isEmpty() ? "List is Empty" : "List not Empty") << endl;
+    list.insertAtHead(2);
+    list.insertAtHead(1);
+    list.insertAtTail(3);
+    list.insertAtHead(0);
+    list.insertAtTail(4);
+    list.removeAtHead();
+    list.forwardTraversal();
+    list.backwardTraversal();
+    cout << "---------------------------------------\n";
+    printf("4: %s\n", list.isExist(4) ? "YES" : "NO");
+    printf("5: %s\n", list.isExist(5) ? "YES" : "NO");
+    cout << "---------------------------------------\n";
+    printf("list[0] %s 0\n", list.isItemAtEqual(0, 0) ? "=" : "!=");
+    // printf("list[4] %s 4\n", list.isItemAtEqual(4, 4) ? "=" : "!="); out of range
+    printf("list[0] %s 1\n", list.isItemAtEqual(1, 0) ? "=" : "!=");
+    // printf("list[9] %s 8\n", list.isItemAtEqual(8, 9) ? "=" : "!="); out of range
+    cout << "---------------------------------------\n";
+    cout << "list size: " << list.doubleLinkedListSize() << endl;
+    list.insertAtTail(5);
+    list.insertAtHead(0);
+    list.forwardTraversal();
+    cout << "---------------------------------------\n";
+    list.removeAtTail();
+    list.insertAtTail(9);
+    list.forwardTraversal();
+    cout << "---------------------------------------\n";
+    printf("list[0] = %d\n", list.retrieveAt(0));
+    printf("list[5] = %d\n", list.retrieveAt(5));
+    printf("list[3] = %d\n", list.retrieveAt(3));
+    // printf("list[6] = %d\n", list.retrieveAt(6)); out of range
+    cout << "---------------------------------------\n";
+    list.replaceAt(-1, 0);
+    list.replaceAt(5, 5);
+    list.replaceAt(3, 1);
+    // list.replaceAt(3, -1); out of range
+    // list.replaceAt(3, 9); out of range
+    list.forwardTraversal();
+    cout << "---------------------------------------\n";
+    cout << (list.isEmpty() ? "List is Empty" : "List not Empty") << endl;
+    list.clear();
+    list.forwardTraversal();
+    // list.removeAt(0); // list is empty
+    cout << (list.isEmpty() ? "List is Empty" : "List not Empty") << endl;
+    printf("1: %s\n", list.isExist(1) ? "YES" : "NO");
+    cout << "---------------------------------------\n";
+    list.insertAt(3, 0);
+    list.insertAt(4, 1);
+    // list.insertAt(8, 5);
+    list.insertAt(5, 2);
+    list.insertAt(2, 0);
+    list.insertAt(1, 0);
+    list.insertAt(0, 0);
+    // list.insertAt(3, 100);
+    list.forwardTraversal();
+    cout << "---------------------------------------\n";
+    // list.removeAt(-1); // out of range
+    // list.removeAt(8); // out of range
+    list.removeAt(0);
+    list.forwardTraversal();
+    cout << "list size: " << list.doubleLinkedListSize() << endl;
 }
